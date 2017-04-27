@@ -12,7 +12,7 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        use: 'vue-loader',
+        loader: 'vue-loader',
         options: {
           loaders: {
           }
@@ -21,12 +21,16 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        use: 'babel-loader',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader?modules'
+      },
+      {
         test: /\.(png|jpg|gif|svg)$/,
-        use: 'file-loader',
+        loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]'
         }
