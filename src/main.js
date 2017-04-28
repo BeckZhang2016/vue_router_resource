@@ -1,22 +1,10 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import App from './App.vue'
-// import Home from './components/Home.vue'
-// import Shop from './components/Shop.vue'
-
-Vue.use(VueRouter);
-
-const router = new VueRouter({
-  routes: [
-    {
-      path: '/user/:id',
-      component: App
-    }
-  ]
-});
-
+import router from './routers/index.js'
+import myApp from './App.vue'
 
 const app = new Vue({
-  router: router
+  router: router,
+  template: '<myApp></myApp>',
+  components: {myApp: myApp}
 }).$mount('#app');
 

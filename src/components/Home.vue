@@ -1,6 +1,8 @@
 <template>
-  <div>{{$route.params.id}}</div>
-  <router-view></router-view>
+  <div>
+    <span>Home</span>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>

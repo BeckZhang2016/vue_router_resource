@@ -1,51 +1,39 @@
 <template>
   <div id="app">
-    <ul>
-      <li><router-link to="/home">Home</router-link></li>
-      <li><router-link to="/shop">Shop</router-link></li>
-      <li><router-link to="/order">Order</router-link></li>
-      <li><router-link to="/personal">Personal</router-link></li>
-    </ul>
-    <router-view></router-view>
+    <h3>Home</h3>
+    <app-menu></app-menu>
+    <div class="common">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  import Menu from './components/Menu.vue'
+  export default {
+    name: 'app',
+    components: {
+      'app-menu': Menu
     }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  li {
+    display: inline-block;
+    float: left;
+    width: 60px;
+  }
 
-h1, h2 {
-  font-weight: normal;
-}
+  a {
+    color: mediumseagreen;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  a:hover {
+    color: red;
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  .common {
 
-a {
-  color: #42b983;
-}
+  }
 </style>

@@ -1,10 +1,12 @@
 <template>
-  <div>{{$route.params.id}}</div>
-  <router-view></router-view>
+  <div>
+    <span>Shop</span>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-  export default{
+  export default {
 
   }
 </script>
