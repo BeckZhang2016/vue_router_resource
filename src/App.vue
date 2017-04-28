@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import Menu from './components/Menu.vue'
+  import Menu from './components/layout/Menu.vue'
   export default {
     name: 'app',
     components: {
@@ -19,14 +19,9 @@
 </script>
 
 <style>
-  li {
-    display: inline-block;
-    float: left;
-    width: 60px;
-  }
-
-  a {
-    color: mediumseagreen;
+  div {
+    margin: 0;
+    padding: 0;
   }
 
   a:hover {
