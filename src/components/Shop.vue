@@ -13,7 +13,7 @@
     name: 'shop',
     methods:{
       goHome: function () {
-        this.$router.push(' ')
+        this.$router.push('/home')
       }
     }
   }

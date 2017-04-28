@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h3>Home</h3>
+    <h1>Home</h1>
     <app-menu></app-menu>
     <div class="common">
       <router-view></router-view>
@@ -14,6 +14,10 @@
     name: 'app',
     components: {
       'app-menu': Menu
+    },
+    beforeRouteEnter: function (to, from, next) {
+      console.log("beforeRouteEnter");
+      next();
     }
   }
 </script>

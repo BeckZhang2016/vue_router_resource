@@ -1,9 +1,9 @@
 <template>
   <div id="menu">
     <ul>
-      <li>
-        <router-link :to="home">Home</router-link>
-      </li>
+      <!--<li>-->
+        <!--<router-link :to="home">Home</router-link>-->
+      <!--</li>-->
       <li>
         <router-link :to="shop">Shop</router-link>
       </li>
@@ -22,11 +22,14 @@
     name: 'menu',
     data: function () {
       return {
-        home: '/',
-        shop: '/shop',
-        order: '/order',
-        personal: '/personal',
+//        home: '/home',
+        shop: '/home/shop',
+        order: '/home/order',
+        personal: '/home/personal',
       }
+    },
+    beforeRouteEnter: function(to, from, next){
+      console.log('beforeRouteEnter');
     },
     methods: {
       goHome: function () {
